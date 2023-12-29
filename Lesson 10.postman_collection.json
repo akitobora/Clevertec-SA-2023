@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "342c5bdf-06ec-491f-af89-1e93e9538483",
+		"name": "Lesson 10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26375659"
+	},
+	"item": [
+		{
+			"name": "POST News",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"Новости по заданию 10\",\r\n    \"text\": \"1Книга об американке Джипси Роуз Бланшар, осужденной за причастность к убийству собственной матери и освободившейся накануне из тюрьмы, возглавила тематический раздел онлайн-ритейлера Amazon.\",\r\n    \"userName\": \"Мойсеенко Андрей Николаевич\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/news_applications/v1/news",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/news_applications/v1/news?keyword=%25%25&pageNo=0&pageSize=5&sortBy=id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"news_applications",
+						"v1",
+						"news"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "%25%25"
+						},
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "sortBy",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit News",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://93.84.86.69:9099/news_applications/v1/news/150",
+					"protocol": "http",
+					"host": [
+						"93",
+						"84",
+						"86",
+						"69"
+					],
+					"port": "9099",
+					"path": [
+						"news_applications",
+						"v1",
+						"news",
+						"150"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete News",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://93.84.86.69:9099/news_applications/v1/news/150",
+					"protocol": "http",
+					"host": [
+						"93",
+						"84",
+						"86",
+						"69"
+					],
+					"port": "9099",
+					"path": [
+						"news_applications",
+						"v1",
+						"news",
+						"150"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
